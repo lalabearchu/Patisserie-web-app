@@ -1,0 +1,13 @@
+{
+  "name": "patisserie-web-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd server && npm install && npm run build  && cd ../client && npm install && npm run build",
+    "start": "node server/dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
