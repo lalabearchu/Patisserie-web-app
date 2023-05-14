@@ -68,6 +68,9 @@ app.use("/api/v1/products", productRoutes);
 app.use("/api/v1/orders", orderRoutes);
 
 app.use(express.static(path.join(__dirname, "../../client/dist")));
+app.get("/api/v1", (req: Request, res: Response) =>
+  res.sendFile(path.join(__dirname, "../../client/dist/api-doc.html"))
+);
 app.get("*", (req: Request, res: Response) =>
   res.sendFile(path.join(__dirname, "../../client/dist/index.html"))
 );
