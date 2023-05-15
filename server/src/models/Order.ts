@@ -12,13 +12,6 @@ export interface SingleItem {
   user: string;
 }
 
-// export interface OrderInput {
-//   total: number;
-//   orderItems: SingleItem[];
-//   orderDate: Date;
-//   user: string;
-// }
-
 export interface OrderDocument extends mongoose.Document {
   total: number;
   orderItems: SingleItem[];
@@ -84,22 +77,6 @@ const OrderSchema = new mongoose.Schema(
       ref: "user",
       required: true,
     },
-    // status: {
-    //   type: String,
-    //   enum: ["pending", "paid"],
-    //   default: "pending",
-    // },
-    // clientSecret: {
-    //   type: String,
-    //   required: true,
-    // },
-    // paymentIntentId: {
-    //   type: String,
-    // },
-    // orderDate: {
-    //   type: Date,
-    //   required: true,
-    // },
   },
   { timestamps: true }
 );
