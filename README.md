@@ -29,7 +29,7 @@ This is a e-commerce web app created by Node.js, Express.js, MongoDB, TypeScript
 * Using docgen to generate API docs.
 
 ### Frontend
-* Using Context API and Reducer for state management.
+* Using Context API and Reducer hooks for state management.
 * Using React Router for routing.
 * Using styled-components to write CSS in TSX files.
 * Search, filter, and sort functionality in products page.
