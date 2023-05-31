@@ -16,9 +16,6 @@ export interface OrderDocument extends mongoose.Document {
   total: number;
   orderItems: SingleItem[];
   user: string;
-  status: string;
-  clientSecret: string;
-  paymentIntentId: string | null;
   createdAt: Date;
   updatedAt: Date;
 }

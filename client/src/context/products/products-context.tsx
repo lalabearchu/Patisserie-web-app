@@ -53,8 +53,8 @@ interface ProductsProviderProps {
 }
 
 interface ProductsContext extends InitialState {
-  getProducts: () => void;
-  getSingleProduct: (id: string) => void;
+  getProducts: () => Promise<void>;
+  getSingleProduct: (id: string) => Promise<void>;
   updateSort: (e: ChangeEvent<HTMLSelectElement>) => void;
   updateFilters: (name: string, value: string | boolean) => void;
   clearFilters: () => void;
@@ -65,7 +65,7 @@ interface ProductsContext extends InitialState {
     image: string;
     category: string;
     featured: boolean;
-  }) => void;
+  }) => Promise<void>;
   updateProduct: (
     id: string,
     input: {
@@ -76,8 +76,8 @@ interface ProductsContext extends InitialState {
       category: string;
       featured: boolean;
     }
-  ) => void;
-  deleteProduct: (id: string) => void;
+  ) => Promise<void>;
+  deleteProduct: (id: string) => Promise<void>;
 }
 
 const initialState: InitialState = {

@@ -33,11 +33,18 @@ interface AuthProviderProps {
 }
 
 interface AuthContext extends InitialState {
-  login: (input: { email: string; password: string }) => void;
-  register: (input: { name: string; email: string; password: string }) => void;
-  logout: () => void;
-  updateUser: (input: { name: string; email: string }) => void;
-  updatePassword: (input: { oldPassword: string; newPassword: string }) => void;
+  login: (input: { email: string; password: string }) => Promise<void>;
+  register: (input: {
+    name: string;
+    email: string;
+    password: string;
+  }) => Promise<void>;
+  logout: () => Promise<void>;
+  updateUser: (input: { name: string; email: string }) => Promise<void>;
+  updatePassword: (input: {
+    oldPassword: string;
+    newPassword: string;
+  }) => Promise<void>;
 }
 
 const initialState: InitialState = {

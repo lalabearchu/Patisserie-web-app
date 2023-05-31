@@ -36,10 +36,10 @@ interface OrdersProviderProps {
 }
 
 interface OrdersContext extends InitialState {
-  createOrder: (cart: CartItem[]) => void;
-  getOrders: () => void;
-  getSingleOrder: (id: string) => void;
-  getUserOrder: () => void;
+  createOrder: (cart: CartItem[]) => Promise<void>;
+  getOrders: () => Promise<void>;
+  getSingleOrder: (id: string) => Promise<void>;
+  getUserOrder: () => Promise<void>;
 }
 
 const initialState: InitialState = {

@@ -1,4 +1,4 @@
-import { Request, Response, query } from "express";
+import { Request, Response } from "express";
 import { ProductDocument } from "../models/Product";
 import { FilterQuery } from "mongoose";
 import {

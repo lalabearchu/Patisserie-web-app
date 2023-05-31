@@ -26,7 +26,6 @@ app.use(
     max: 100,
   })
 );
-// app.use(helmet());
 app.use(
   helmet({
     crossOriginEmbedderPolicy: false,
